@@ -16,7 +16,7 @@ jobs:
       - name: Configurar node
         uses: actions/setup-node@v3
         with:
-          node-version: 20
+          node-version: 18
       - run: npm install 
       - run: npm test 
 
@@ -24,6 +24,6 @@ jobs:
       -name: Desplegar en github pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_tokens: ${{ secrets.GITHUB_TOKEN }}
+          github_tokens: ${{secrets.GITHUB_TOKEN}}
           publish_dir: ./
           allow_empty_commit: true
