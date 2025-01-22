@@ -22,7 +22,7 @@ jobs:
       - run: npm test 
 
 
-      -name: Desplegar en Github Pages
+      - name: Desplegar en Github Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_tokens: ${{secrets.GITHUB_TOKEN}}
